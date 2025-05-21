@@ -1,0 +1,204 @@
+{
+	"2025-05-09T10:48:00+08:00": [
+		{
+			"LinkID": "6004930000080A",
+			"LaneID": 0,
+			"LaneType": 1,
+			"Speed": 43.0,
+			"Occupancy": 6.0,
+			"Vehicles": {
+				"M": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"S": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"L": {
+					"Volume": 2,
+					"Speed": 43.0
+				},
+				"T": {
+					"Volume": 0,
+					"Speed": 0.0
+				}
+			}
+		},
+		{
+			"LinkID": "6004930000080A",
+			"LaneID": 1,
+			"LaneType": 1,
+			"Speed": 58.0,
+			"Occupancy": 10.0,
+			"Vehicles": {
+				"M": {
+					"Volume": 1,
+					"Speed": 82.0
+				},
+				"S": {
+					"Volume": 7,
+					"Speed": 58.0
+				},
+				"L": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"T": {
+					"Volume": 0,
+					"Speed": 0.0
+				}
+			}
+		},
+		{
+			"LinkID": "6004930000080A",
+			"LaneID": 2,
+			"LaneType": 1,
+			"Speed": 44.0,
+			"Occupancy": 18.0,
+			"Vehicles": {
+				"M": {
+					"Volume": 8,
+					"Speed": 49.0
+				},
+				"S": {
+					"Volume": 4,
+					"Speed": 49.0
+				},
+				"L": {
+					"Volume": 1,
+					"Speed": 24.0
+				},
+				"T": {
+					"Volume": 0,
+					"Speed": 0.0
+				}
+			}
+		},
+		{
+			"LinkID": "6004930000080A",
+			"LaneID": 3,
+			"LaneType": 1,
+			"Speed": 0.0,
+			"Occupancy": 0.0,
+			"Vehicles": {
+				"M": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"S": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"L": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"T": {
+					"Volume": 0,
+					"Speed": 0.0
+				}
+			}
+		},
+		{
+			"LinkID": "6004930400060A",
+			"LaneID": 0,
+			"LaneType": 1,
+			"Speed": 37.0,
+			"Occupancy": 4.0,
+			"Vehicles": {
+				"M": {
+					"Volume": 1,
+					"Speed": 43.0
+				},
+				"S": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"L": {
+					"Volume": 1,
+					"Speed": 37.0
+				},
+				"T": {
+					"Volume": 0,
+					"Speed": 0.0
+				}
+			}
+		},
+		{
+			"LinkID": "6004930400060A",
+			"LaneID": 1,
+			"LaneType": 1,
+			"Speed": 45.0,
+			"Occupancy": 17.0,
+			"Vehicles": {
+				"M": {
+					"Volume": 7,
+					"Speed": 58.0
+				},
+				"S": {
+					"Volume": 7,
+					"Speed": 46.0
+				},
+				"L": {
+					"Volume": 1,
+					"Speed": 44.0
+				},
+				"T": {
+					"Volume": 0,
+					"Speed": 0.0
+				}
+			}
+		},
+		{
+			"LinkID": "6004930400060A",
+			"LaneID": 2,
+			"LaneType": 1,
+			"Speed": 25.0,
+			"Occupancy": 20.0,
+			"Vehicles": {
+				"M": {
+					"Volume": 4,
+					"Speed": 42.0
+				},
+				"S": {
+					"Volume": 5,
+					"Speed": 25.0
+				},
+				"L": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"T": {
+					"Volume": 0,
+					"Speed": 0.0
+				}
+			}
+		},
+		{
+			"LinkID": "6004930400060A",
+			"LaneID": 3,
+			"LaneType": 1,
+			"Speed": 0.0,
+			"Occupancy": 0.0,
+			"Vehicles": {
+				"M": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"S": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"L": {
+					"Volume": 0,
+					"Speed": 0.0
+				},
+				"T": {
+					"Volume": 0,
+					"Speed": 0.0
+				}
+			}
+		}
+	]
+}

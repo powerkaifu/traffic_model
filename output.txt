@@ -1,0 +1,2000 @@
+預測結果索引 0 (測試集索引: 0, 原始 DataFrame 索引: 0)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6001190600010A
+LaneID                               0
+LaneType                             1
+Speed                             39.0
+Occupancy                          4.0
+Volume_M                             1
+Speed_M                           40.0
+Volume_S                             2
+Speed_S                           39.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 0, dtype: object
+--------------------------------------------------
+預測結果索引 1 (測試集索引: 1, 原始 DataFrame 索引: 1)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6001190200010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           37.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 1, dtype: object
+--------------------------------------------------
+預測結果索引 2 (測試集索引: 2, 原始 DataFrame 索引: 2)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6001190200010A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 2, dtype: object
+--------------------------------------------------
+預測結果索引 3 (測試集索引: 3, 原始 DataFrame 索引: 3)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6001190200010A
+LaneID                               4
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           37.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 3, dtype: object
+--------------------------------------------------
+預測結果索引 4 (測試集索引: 4, 原始 DataFrame 索引: 4)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6001190200010A
+LaneID                               1
+LaneType                             1
+Speed                             34.0
+Occupancy                          7.0
+Volume_M                             3
+Speed_M                           68.0
+Volume_S                             2
+Speed_S                           34.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 4, dtype: object
+--------------------------------------------------
+預測結果索引 5 (測試集索引: 5, 原始 DataFrame 索引: 5)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6004930400060A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 5, dtype: object
+--------------------------------------------------
+預測結果索引 6 (測試集索引: 6, 原始 DataFrame 索引: 6)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6004930400060A
+LaneID                               2
+LaneType                             1
+Speed                             37.0
+Occupancy                          2.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             1
+Speed_S                           37.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 6, dtype: object
+--------------------------------------------------
+預測結果索引 7 (測試集索引: 7, 原始 DataFrame 索引: 7)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6004930400060A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 7, dtype: object
+--------------------------------------------------
+預測結果索引 8 (測試集索引: 8, 原始 DataFrame 索引: 8)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6004930400060A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 8, dtype: object
+--------------------------------------------------
+預測結果索引 9 (測試集索引: 9, 原始 DataFrame 索引: 9)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6004930000080A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 9, dtype: object
+--------------------------------------------------
+預測結果索引 10 (測試集索引: 10, 原始 DataFrame 索引: 10)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6004930000080A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 10, dtype: object
+--------------------------------------------------
+預測結果索引 11 (測試集索引: 11, 原始 DataFrame 索引: 11)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6004930000080A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 11, dtype: object
+--------------------------------------------------
+預測結果索引 12 (測試集索引: 12, 原始 DataFrame 索引: 12)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6004930000080A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 12, dtype: object
+--------------------------------------------------
+預測結果索引 13 (測試集索引: 14, 原始 DataFrame 索引: 14)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6001190600010A
+LaneID                               1
+LaneType                             1
+Speed                             50.0
+Occupancy                          8.0
+Volume_M                             3
+Speed_M                           54.0
+Volume_S                             3
+Speed_S                           50.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 14, dtype: object
+--------------------------------------------------
+預測結果索引 14 (測試集索引: 15, 原始 DataFrame 索引: 15)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:02:00+08:00
+LinkID                  6001190600010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           58.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 15, dtype: object
+--------------------------------------------------
+預測結果索引 15 (測試集索引: 16, 原始 DataFrame 索引: 16)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6001190200010A
+LaneID                               1
+LaneType                             1
+Speed                             55.0
+Occupancy                          3.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             3
+Speed_S                           55.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 16, dtype: object
+--------------------------------------------------
+預測結果索引 16 (測試集索引: 17, 原始 DataFrame 索引: 17)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6004930000080A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 17, dtype: object
+--------------------------------------------------
+預測結果索引 17 (測試集索引: 18, 原始 DataFrame 索引: 18)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6004930000080A
+LaneID                               2
+LaneType                             1
+Speed                             20.0
+Occupancy                         33.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             1
+Speed_S                           20.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 18, dtype: object
+--------------------------------------------------
+預測結果索引 18 (測試集索引: 19, 原始 DataFrame 索引: 19)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6004930000080A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 19, dtype: object
+--------------------------------------------------
+預測結果索引 19 (測試集索引: 20, 原始 DataFrame 索引: 20)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6004930000080A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 20, dtype: object
+--------------------------------------------------
+預測結果索引 20 (測試集索引: 21, 原始 DataFrame 索引: 21)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6001190600010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 21, dtype: object
+--------------------------------------------------
+預測結果索引 21 (測試集索引: 22, 原始 DataFrame 索引: 22)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6004930400060A
+LaneID                               2
+LaneType                             1
+Speed                             42.0
+Occupancy                          2.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             1
+Speed_S                           42.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 22, dtype: object
+--------------------------------------------------
+預測結果索引 22 (測試集索引: 23, 原始 DataFrame 索引: 23)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6004930400060A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 23, dtype: object
+--------------------------------------------------
+預測結果索引 23 (測試集索引: 24, 原始 DataFrame 索引: 24)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6001190600010A
+LaneID                               1
+LaneType                             1
+Speed                             48.0
+Occupancy                          7.0
+Volume_M                             3
+Speed_M                           52.0
+Volume_S                             1
+Speed_S                           48.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 24, dtype: object
+--------------------------------------------------
+預測結果索引 24 (測試集索引: 25, 原始 DataFrame 索引: 25)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6001190600010A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 25, dtype: object
+--------------------------------------------------
+預測結果索引 25 (測試集索引: 26, 原始 DataFrame 索引: 26)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6001190200010A
+LaneID                               0
+LaneType                             1
+Speed                             70.0
+Occupancy                          2.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             2
+Speed_S                           70.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 26, dtype: object
+--------------------------------------------------
+預測結果索引 26 (測試集索引: 27, 原始 DataFrame 索引: 27)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6004930400060A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 27, dtype: object
+--------------------------------------------------
+預測結果索引 27 (測試集索引: 28, 原始 DataFrame 索引: 28)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6001190200010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 28, dtype: object
+--------------------------------------------------
+預測結果索引 28 (測試集索引: 29, 原始 DataFrame 索引: 29)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6001190200010A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 29, dtype: object
+--------------------------------------------------
+預測結果索引 29 (測試集索引: 30, 原始 DataFrame 索引: 30)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6004930400060A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 30, dtype: object
+--------------------------------------------------
+預測結果索引 30 (測試集索引: 31, 原始 DataFrame 索引: 31)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:06:00+08:00
+LinkID                  6001190200010A
+LaneID                               4
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           40.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 31, dtype: object
+--------------------------------------------------
+預測結果索引 31 (測試集索引: 32, 原始 DataFrame 索引: 32)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6001190200010A
+LaneID                               0
+LaneType                             1
+Speed                             55.0
+Occupancy                          4.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             3
+Speed_S                           55.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 32, dtype: object
+--------------------------------------------------
+預測結果索引 32 (測試集索引: 35, 原始 DataFrame 索引: 35)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6001190600010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             2
+Speed_M                           45.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 35, dtype: object
+--------------------------------------------------
+預測結果索引 33 (測試集索引: 36, 原始 DataFrame 索引: 36)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6004930000080A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 36, dtype: object
+--------------------------------------------------
+預測結果索引 34 (測試集索引: 37, 原始 DataFrame 索引: 37)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6004930400060A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 37, dtype: object
+--------------------------------------------------
+預測結果索引 35 (測試集索引: 38, 原始 DataFrame 索引: 38)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6004930000080A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 38, dtype: object
+--------------------------------------------------
+預測結果索引 36 (測試集索引: 39, 原始 DataFrame 索引: 39)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6004930400060A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 39, dtype: object
+--------------------------------------------------
+預測結果索引 37 (測試集索引: 40, 原始 DataFrame 索引: 40)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6004930400060A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 40, dtype: object
+--------------------------------------------------
+預測結果索引 38 (測試集索引: 41, 原始 DataFrame 索引: 41)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6004930400060A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 41, dtype: object
+--------------------------------------------------
+預測結果索引 39 (測試集索引: 42, 原始 DataFrame 索引: 42)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6001190200010A
+LaneID                               4
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 42, dtype: object
+--------------------------------------------------
+預測結果索引 40 (測試集索引: 43, 原始 DataFrame 索引: 43)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6001190200010A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 43, dtype: object
+--------------------------------------------------
+預測結果索引 41 (測試集索引: 44, 原始 DataFrame 索引: 44)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6001190200010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           55.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 44, dtype: object
+--------------------------------------------------
+預測結果索引 42 (測試集索引: 45, 原始 DataFrame 索引: 45)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6001190200010A
+LaneID                               1
+LaneType                             1
+Speed                             46.0
+Occupancy                          3.0
+Volume_M                             1
+Speed_M                           44.0
+Volume_S                             1
+Speed_S                           46.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 45, dtype: object
+--------------------------------------------------
+預測結果索引 43 (測試集索引: 46, 原始 DataFrame 索引: 46)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6004930000080A
+LaneID                               2
+LaneType                             1
+Speed                             47.0
+Occupancy                          5.0
+Volume_M                             1
+Speed_M                           19.0
+Volume_S                             1
+Speed_S                           47.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 46, dtype: object
+--------------------------------------------------
+預測結果索引 44 (測試集索引: 47, 原始 DataFrame 索引: 47)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:10:00+08:00
+LinkID                  6004930000080A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 47, dtype: object
+--------------------------------------------------
+預測結果索引 45 (測試集索引: 48, 原始 DataFrame 索引: 48)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6004930000080A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 48, dtype: object
+--------------------------------------------------
+預測結果索引 46 (測試集索引: 49, 原始 DataFrame 索引: 49)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6004930400060A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 49, dtype: object
+--------------------------------------------------
+預測結果索引 47 (測試集索引: 50, 原始 DataFrame 索引: 50)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6004930400060A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           44.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 50, dtype: object
+--------------------------------------------------
+預測結果索引 48 (測試集索引: 51, 原始 DataFrame 索引: 51)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6004930400060A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 51, dtype: object
+--------------------------------------------------
+預測結果索引 49 (測試集索引: 52, 原始 DataFrame 索引: 52)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6004930400060A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 52, dtype: object
+--------------------------------------------------
+預測結果索引 50 (測試集索引: 53, 原始 DataFrame 索引: 53)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6004930000080A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 53, dtype: object
+--------------------------------------------------
+預測結果索引 51 (測試集索引: 54, 原始 DataFrame 索引: 54)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6001190600010A
+LaneID                               0
+LaneType                             1
+Speed                             59.0
+Occupancy                          5.0
+Volume_M                             2
+Speed_M                           55.0
+Volume_S                             3
+Speed_S                           59.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 54, dtype: object
+--------------------------------------------------
+預測結果索引 52 (測試集索引: 55, 原始 DataFrame 索引: 55)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6004930000080A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 55, dtype: object
+--------------------------------------------------
+預測結果索引 53 (測試集索引: 57, 原始 DataFrame 索引: 57)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6001190600010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           46.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 57, dtype: object
+--------------------------------------------------
+預測結果索引 54 (測試集索引: 58, 原始 DataFrame 索引: 58)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6001190200010A
+LaneID                               0
+LaneType                             1
+Speed                             49.0
+Occupancy                          2.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             1
+Speed_S                           49.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 58, dtype: object
+--------------------------------------------------
+預測結果索引 55 (測試集索引: 59, 原始 DataFrame 索引: 59)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6001190200010A
+LaneID                               1
+LaneType                             1
+Speed                             52.0
+Occupancy                          2.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             2
+Speed_S                           52.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 59, dtype: object
+--------------------------------------------------
+預測結果索引 56 (測試集索引: 60, 原始 DataFrame 索引: 60)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6001190200010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           53.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 60, dtype: object
+--------------------------------------------------
+預測結果索引 57 (測試集索引: 61, 原始 DataFrame 索引: 61)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6001190200010A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 61, dtype: object
+--------------------------------------------------
+預測結果索引 58 (測試集索引: 62, 原始 DataFrame 索引: 62)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6001190200010A
+LaneID                               4
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 62, dtype: object
+--------------------------------------------------
+預測結果索引 59 (測試集索引: 63, 原始 DataFrame 索引: 63)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:16:00+08:00
+LinkID                  6004930000080A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 63, dtype: object
+--------------------------------------------------
+預測結果索引 60 (測試集索引: 65, 原始 DataFrame 索引: 65)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6001190200010A
+LaneID                               0
+LaneType                             1
+Speed                             58.0
+Occupancy                          3.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             2
+Speed_S                           58.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 65, dtype: object
+--------------------------------------------------
+預測結果索引 61 (測試集索引: 66, 原始 DataFrame 索引: 66)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6001190200010A
+LaneID                               1
+LaneType                             1
+Speed                             43.0
+Occupancy                          4.0
+Volume_M                             1
+Speed_M                           64.0
+Volume_S                             2
+Speed_S                           43.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 66, dtype: object
+--------------------------------------------------
+預測結果索引 62 (測試集索引: 67, 原始 DataFrame 索引: 67)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6001190200010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             2
+Speed_M                           46.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 67, dtype: object
+--------------------------------------------------
+預測結果索引 63 (測試集索引: 68, 原始 DataFrame 索引: 68)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6001190200010A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 68, dtype: object
+--------------------------------------------------
+預測結果索引 64 (測試集索引: 69, 原始 DataFrame 索引: 69)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6001190200010A
+LaneID                               4
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 69, dtype: object
+--------------------------------------------------
+預測結果索引 65 (測試集索引: 70, 原始 DataFrame 索引: 70)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6001190600010A
+LaneID                               1
+LaneType                             1
+Speed                             45.0
+Occupancy                          6.0
+Volume_M                             3
+Speed_M                           57.0
+Volume_S                             2
+Speed_S                           45.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 70, dtype: object
+--------------------------------------------------
+預測結果索引 66 (測試集索引: 71, 原始 DataFrame 索引: 71)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6001190600010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           33.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 71, dtype: object
+--------------------------------------------------
+預測結果索引 67 (測試集索引: 72, 原始 DataFrame 索引: 72)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6004930000080A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 72, dtype: object
+--------------------------------------------------
+預測結果索引 68 (測試集索引: 73, 原始 DataFrame 索引: 73)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6004930400060A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 73, dtype: object
+--------------------------------------------------
+預測結果索引 69 (測試集索引: 74, 原始 DataFrame 索引: 74)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6004930400060A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 74, dtype: object
+--------------------------------------------------
+預測結果索引 70 (測試集索引: 75, 原始 DataFrame 索引: 75)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6004930400060A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           73.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 75, dtype: object
+--------------------------------------------------
+預測結果索引 71 (測試集索引: 76, 原始 DataFrame 索引: 76)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6004930000080A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 76, dtype: object
+--------------------------------------------------
+預測結果索引 72 (測試集索引: 77, 原始 DataFrame 索引: 77)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6004930400060A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 77, dtype: object
+--------------------------------------------------
+預測結果索引 73 (測試集索引: 78, 原始 DataFrame 索引: 78)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6004930000080A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 78, dtype: object
+--------------------------------------------------
+預測結果索引 74 (測試集索引: 79, 原始 DataFrame 索引: 79)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:20:00+08:00
+LinkID                  6004930000080A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             1
+Speed_M                           51.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 79, dtype: object
+--------------------------------------------------
+預測結果索引 75 (測試集索引: 80, 原始 DataFrame 索引: 80)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6001190600010A
+LaneID                               2
+LaneType                             1
+Speed                              2.0
+Occupancy                         23.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             1
+Speed_S                            2.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 80, dtype: object
+--------------------------------------------------
+預測結果索引 76 (測試集索引: 81, 原始 DataFrame 索引: 81)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6001190600010A
+LaneID                               1
+LaneType                             1
+Speed                             40.0
+Occupancy                          6.0
+Volume_M                             4
+Speed_M                           50.0
+Volume_S                             1
+Speed_S                           40.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 81, dtype: object
+--------------------------------------------------
+預測結果索引 77 (測試集索引: 82, 原始 DataFrame 索引: 82)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6001190600010A
+LaneID                               0
+LaneType                             1
+Speed                             24.0
+Occupancy                          4.0
+Volume_M                             1
+Speed_M                           47.0
+Volume_S                             2
+Speed_S                           24.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 82, dtype: object
+--------------------------------------------------
+預測結果索引 78 (測試集索引: 83, 原始 DataFrame 索引: 83)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6001190200010A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 83, dtype: object
+--------------------------------------------------
+預測結果索引 79 (測試集索引: 85, 原始 DataFrame 索引: 85)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6001190200010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 85, dtype: object
+--------------------------------------------------
+預測結果索引 80 (測試集索引: 86, 原始 DataFrame 索引: 86)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6001190200010A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 86, dtype: object
+--------------------------------------------------
+預測結果索引 81 (測試集索引: 87, 原始 DataFrame 索引: 87)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6001190200010A
+LaneID                               4
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 87, dtype: object
+--------------------------------------------------
+預測結果索引 82 (測試集索引: 88, 原始 DataFrame 索引: 88)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6004930400060A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 88, dtype: object
+--------------------------------------------------
+預測結果索引 83 (測試集索引: 89, 原始 DataFrame 索引: 89)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6004930400060A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 89, dtype: object
+--------------------------------------------------
+預測結果索引 84 (測試集索引: 90, 原始 DataFrame 索引: 90)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6004930000080A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 90, dtype: object
+--------------------------------------------------
+預測結果索引 85 (測試集索引: 91, 原始 DataFrame 索引: 91)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6004930000080A
+LaneID                               2
+LaneType                             1
+Speed                             23.0
+Occupancy                         60.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             1
+Speed_S                           23.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 91, dtype: object
+--------------------------------------------------
+預測結果索引 86 (測試集索引: 92, 原始 DataFrame 索引: 92)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6004930000080A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 92, dtype: object
+--------------------------------------------------
+預測結果索引 87 (測試集索引: 93, 原始 DataFrame 索引: 93)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6004930000080A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 93, dtype: object
+--------------------------------------------------
+預測結果索引 88 (測試集索引: 94, 原始 DataFrame 索引: 94)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6004930400060A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 94, dtype: object
+--------------------------------------------------
+預測結果索引 89 (測試集索引: 95, 原始 DataFrame 索引: 95)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:26:00+08:00
+LinkID                  6004930400060A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 95, dtype: object
+--------------------------------------------------
+預測結果索引 90 (測試集索引: 96, 原始 DataFrame 索引: 96)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:30:00+08:00
+LinkID                  6001190200010A
+LaneID                               0
+LaneType                             1
+Speed                             49.0
+Occupancy                          4.0
+Volume_M                             1
+Speed_M                           63.0
+Volume_S                             3
+Speed_S                           49.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 96, dtype: object
+--------------------------------------------------
+預測結果索引 91 (測試集索引: 98, 原始 DataFrame 索引: 98)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:30:00+08:00
+LinkID                  6001190200010A
+LaneID                               4
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 98, dtype: object
+--------------------------------------------------
+預測結果索引 92 (測試集索引: 100, 原始 DataFrame 索引: 100)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:30:00+08:00
+LinkID                  6001190600010A
+LaneID                               1
+LaneType                             1
+Speed                             49.0
+Occupancy                         12.0
+Volume_M                             6
+Speed_M                           52.0
+Volume_S                             3
+Speed_S                           49.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 100, dtype: object
+--------------------------------------------------
+預測結果索引 93 (測試集索引: 101, 原始 DataFrame 索引: 101)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:30:00+08:00
+LinkID                  6001190600010A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJM60
+Direction                         West
+Name: 101, dtype: object
+--------------------------------------------------
+預測結果索引 94 (測試集索引: 102, 原始 DataFrame 索引: 102)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:30:00+08:00
+LinkID                  6001190200010A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX20
+Direction                         East
+Name: 102, dtype: object
+--------------------------------------------------
+預測結果索引 95 (測試集索引: 103, 原始 DataFrame 索引: 103)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:30:00+08:00
+LinkID                  6004930000080A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 103, dtype: object
+--------------------------------------------------
+預測結果索引 96 (測試集索引: 104, 原始 DataFrame 索引: 104)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:30:00+08:00
+LinkID                  6004930000080A
+LaneID                               1
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 104, dtype: object
+--------------------------------------------------
+預測結果索引 97 (測試集索引: 105, 原始 DataFrame 索引: 105)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:30:00+08:00
+LinkID                  6004930000080A
+LaneID                               2
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 105, dtype: object
+--------------------------------------------------
+預測結果索引 98 (測試集索引: 106, 原始 DataFrame 索引: 106)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:30:00+08:00
+LinkID                  6004930000080A
+LaneID                               3
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        North
+Name: 106, dtype: object
+--------------------------------------------------
+預測結果索引 99 (測試集索引: 107, 原始 DataFrame 索引: 107)，預測綠燈秒數：99.0
+原始資料:
+timestamp    2025-05-05 00:30:00+08:00
+LinkID                  6004930400060A
+LaneID                               0
+LaneType                             1
+Speed                              0.0
+Occupancy                          0.0
+Volume_M                             0
+Speed_M                            0.0
+Volume_S                             0
+Speed_S                            0.0
+Volume_L                             0
+Speed_L                            0.0
+Volume_T                             0
+Speed_T                            0.0
+VD_ID                          VLRJX00
+Direction                        South
+Name: 107, dtype: object
+--------------------------------------------------
