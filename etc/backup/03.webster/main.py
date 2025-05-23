@@ -1,11 +1,15 @@
 # main.py
+import numpy as np
 import pandas as pd
 from sklearn.model_selection import train_test_split
-from data_process import combine_vd_dataframes, preprocess_data
-from predictor import build_model, train_model, evaluate_model, predict_new
+
 import tensorflow as tf
 from tensorflow.keras.models import load_model  # type: ignore
 import os
+
+from data_process import combine_vd_dataframes, preprocess_data
+from predictor import build_model, train_model, evaluate_model, predict_new
+from visualizer import plot_volume_distribution, plot_speed_distribution
 
 pd.set_option('display.width', None)
 pd.set_option('display.max_columns', None)
@@ -20,6 +24,12 @@ date_file = '2025-05-05_2025-05-11.json'
 merged_df = combine_vd_dataframes(base_dir, vd_folders, date_file)
 print("合併後的 DataFrame 資料筆數：", merged_df.head())
 print(f"合併後的 DataFrame 總欄位筆數：{len(merged_df)}")
+
+# 繪製流量和速度的分布圖 ---
+plot_volume_distribution(merged_df)
+plot_speed_distribution(merged_df)
+
+# ----------------------------------------------------------------------------------------
 
 if merged_df is not None:
   print("合併後的 DataFrame 資料欄位：")
@@ -67,7 +77,7 @@ if merged_df is not None:
     print("🆕 建立新的模型")
 
   # 模型訓練
-  train_model(model, X_train, y_train, epochs = 30)
+  train_model(model, X_train, y_train, epochs = 3)
 
   # 儲存模型
   os.makedirs(os.path.dirname(model_path), exist_ok = True)

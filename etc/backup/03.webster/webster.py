@@ -1,3 +1,5 @@
+# webster.py
+
 import numpy as np
 import pandas as pd
 
@@ -19,10 +21,9 @@ def assign_green_seconds(df, n_phases=2, saturation_flow=1900, loss_time_per_pha
     pd.DataFrame: 含新增 'green_seconds' 欄位。
     """
 
-
     # --- 預處理 ---
     cols_to_fill_zero = ['Volume_S', 'Volume_L', 'Volume_T', 'Occupancy',
-                        'Speed_S', 'Speed_L', 'Speed_T', 'IsPeakHour']
+                         'Speed_S', 'Speed_L', 'Speed_T', 'IsPeakHour']
     for col in cols_to_fill_zero:
         if col in df.columns:
             df[col] = df[col].fillna(0)
@@ -87,16 +88,16 @@ def assign_green_seconds(df, n_phases=2, saturation_flow=1900, loss_time_per_pha
         return total
     vehicle_bonus = df.apply(calc_vehicle_bonus, axis=1)
 
-    # 3. 速度懲罰 (平均速度低於30km/h時懲罰15秒)
-    speeds = []
-    for s_col in ['Speed_S', 'Speed_L', 'Speed_T']:
-        if s_col in df.columns:
-            speeds.append(df[s_col])
-    if speeds:
-        avg_speed = sum(speeds) / len(speeds)
-    else:
-        avg_speed = 100  # 無速度資料時視為高速，無懲罰
-    speed_penalty = np.where(avg_speed < 30, 15, 0)
+    # 3. 速度懲罰 (每個方向低於 30km/h 時，各加 5 秒懲罰)
+    def calc_speed_penalty(row):
+        penalty = 0
+        for s_col in ['Speed_S', 'Speed_L', 'Speed_T']:
+            if s_col in row and row[s_col] < 30:
+                penalty += 5
+        return penalty
+
+    # 速度懲罰計算
+    speed_penalty = df.apply(calc_speed_penalty, axis=1)
 
     # 4. 尖峰時段加成
     peak_bonus = df['IsPeakHour'] * 20 if 'IsPeakHour' in df.columns else 0
@@ -104,7 +105,7 @@ def assign_green_seconds(df, n_phases=2, saturation_flow=1900, loss_time_per_pha
     # --- 最終綠燈秒數 ---
     final_green_seconds = df['effective_green_webster'] + base_adjustment + vehicle_bonus + speed_penalty + peak_bonus
 
-    # 限制綠燈秒數範圍20~90秒並四捨五入
+    # 限制綠燈秒數範圍20~99秒並四捨五入
     df['green_seconds'] = final_green_seconds.clip(lower=20, upper=99).round().astype(int)
 
     # 清理暫存欄位
