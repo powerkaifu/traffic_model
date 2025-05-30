@@ -5,6 +5,7 @@ import pandas as pd
 from sklearn.preprocessing import StandardScaler
 from webster import assign_green_seconds
 
+
 # 資料前處理
 def preprocess_data(df, is_training = True, return_indices = False):
   try:
@@ -42,24 +43,24 @@ def preprocess_data(df, is_training = True, return_indices = False):
     # 3. 類別特徵處理 (One-Hot Encoding) - 將 VD_ID 轉換為數值，讓模型可以處理
     df = pd.get_dummies(df, columns = ['VD_ID'], prefix = ['VD_ID'])
 
-    # 4. 資料縮放 (StandardScaler) - 全特徵輸入
+    # 4. 資料縮放 (StandardScaler) - 全特徵輸入 16 個
     numerical_features = [
-        'Speed', # 平均速度
-        'Occupancy', # 車道佔用率
-        'Volume_M', # 機車流量
-        'Volume_S', # 小型車流量
-        'Volume_L', # 大型車流量
-        'Volume_T', # 聯結車流量
-        'Speed_M', # 機車平均速度
-        'Speed_S', # 小型車平均速度
-        'Speed_L', # 大型車平均速度
-        'Speed_T', # 聯結車平均速度
-        'DayOfWeek', # 星期幾
-        'Hour', # 幾時
-        'Minute', # 幾分
-        'Second', # 幾秒
-        'LaneID', # 車道編號
-        'LaneType', # 車道類型
+        'Speed',  # 平均速度
+        'Occupancy',  # 車道佔用率
+        'Volume_M',  # 機車流量
+        'Volume_S',  # 小型車流量
+        'Volume_L',  # 大型車流量
+        'Volume_T',  # 聯結車流量
+        'Speed_M',  # 機車平均速度
+        'Speed_S',  # 小型車平均速度
+        'Speed_L',  # 大型車平均速度
+        'Speed_T',  # 聯結車平均速度
+        'DayOfWeek',  # 星期幾
+        'Hour',  # 幾時
+        'Minute',  # 幾分
+        'Second',  # 幾秒
+        'LaneID',  # 車道編號
+        'LaneType',  # 車道類型
     ]
     scaler = StandardScaler()  # 標準化數據
     df[numerical_features] = scaler.fit_transform(df[numerical_features])

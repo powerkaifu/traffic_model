@@ -1,13 +1,12 @@
 # webster.py
-
-import numpy as np
-import pandas as pd
-
 # 綠燈秒數策略 - Webster 號誌配時理論
+# Webster 號誌配時理論 是一種經典的交通號誌配時公式，用來計算十字路口每個時相（如東西向、南北向）的最適綠燈秒數，
+# 目標是：可以減少車輛延誤時間，提高路口通行效率
+# 其核心公式是根據「飽和流量（saturation flow）」與「實際流量」來推算整體週期時間（Cycle Time），再分配每個方向該得的綠燈時間。
+
 def assign_green_seconds(df, n_phases=2, saturation_flow=1900, loss_time_per_phase=4):
     """
     結合 Webster 號誌配時理論與實時交通數據(特徵值)，計算並分配綠燈秒數。
-
     參數:
     df (pd.DataFrame): 包含交通數據的 DataFrame，應包含以下欄位：
                        'Volume_S', 'Volume_L', 'Volume_T',
@@ -105,7 +104,7 @@ def assign_green_seconds(df, n_phases=2, saturation_flow=1900, loss_time_per_pha
     # --- 最終綠燈秒數 ---
     final_green_seconds = df['effective_green_webster'] + base_adjustment + vehicle_bonus + speed_penalty + peak_bonus
 
-    # 限制綠燈秒數範圍20~99秒並四捨五入
+    # 限制綠燈秒數範圍 20~99 秒並四捨五入
     df['green_seconds'] = final_green_seconds.clip(lower=20, upper=99).round().astype(int)
 
     # 清理暫存欄位

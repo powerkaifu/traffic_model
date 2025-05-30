@@ -5,30 +5,48 @@ import pandas as pd
 from tensorflow.keras.models import Sequential  # type: ignore
 from tensorflow.keras.layers import Dense, Input  # type: ignore
 from tensorflow.keras.optimizers import Adam  # type: ignore
+from tensorflow.keras.callbacks import EarlyStopping  # type: ignore
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
-import matplotlib.pyplot as plt
 from visualizer import plot_scatter_predictions
 
-'''
-一個基於神經網路的監督式學習 (Supervised Learning) 模型
-用於回歸任務 (Regression) 來預測連續變數
-'''
-
-# 設定字型為微軟正黑體
-plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei']
-plt.rcParams['axes.unicode_minus'] = False  # 確保負號能顯示正常
-
-
 # 建立模型
+'''
+建立一個神經網路回歸模型，輸入給的特徵數，經過兩層有非線性變換的隱藏層，
+最後輸出一個連續值（綠燈秒數），用 MSE 來衡量預測誤差，並用 Adam 優化器來訓練模型。
+
+
+神經網路通常分成三種層：
+輸入層：接收原始資料（你的特徵值）
+隱藏層：位於輸入層和輸出層之間，用來「處理」資料的層，隱藏層由很多神經元（節點）組成，每個神經元會接收輸入，做計算，並把結果傳給下一層。
+輸出層：產生結果（你的綠燈秒數預測）
+
+為什麼要「非線性變換」？
+如果神經元只是做線性計算（像是加權總和），不管疊幾層，整個網路的輸出還是線性的，等同於只有一層線性模型，學不到複雜的關係。
+所以必須加「非線性函數」（activation function），讓模型可以學到複雜、彎曲的資料模式。
+
+ReLU (Rectified Linear Unit) 是一種常見的非線性激活函數，規則是：
+輸入 > 0 時輸出原值
+輸入 ≤ 0 時輸出 0
+這個簡單的函數讓模型可以學習非線性的資料特性。
+'''
+
+
+# input_shape 是模型的輸入形狀，通常是特徵數量，特徵值是 16。
 def build_model(input_shape):
   # Sequential() 是 Keras 中的一種模型類型，表示一個線性堆疊的神經網路。
   model = Sequential([
+      # 輸入層，告訴模型輸入的特徵數量
       Input(shape = ( input_shape,)),
+      # 第一層隱藏層，有 64 個神經元（節點），每個神經元會執行一個簡單的計算，並用 ReLU 激活函數來增加非線性（讓模型能學複雜模式）
       Dense(64, activation = 'relu'),
+      # 第二層隱藏層，有 32 個神經元，功能同上
       Dense(32, activation = 'relu'),
-      Dense(1)  # 預測一個連續值：綠燈秒數
+      # 預測一個連續值：綠燈秒數
+      Dense(1)
   ])
-  # 將模型的損失函數設定為 'mse'，均方誤差是衡量回歸模型預測值與真實值之間差異的常用指標
+  # optimizer=Adam 是優化器，用來更新模型權重，讓損失函數（誤差）變小
+  # learning_rate=0.001 是更新的速度，太大可能不穩定，太小學得慢
+  # loss='mse' 是損失函數，用「均方誤差」衡量預測值和真實值差距
   model.compile(optimizer = Adam(learning_rate = 0.001), loss = 'mse')
   return model
 
@@ -45,7 +63,22 @@ verbose 這是用來設置訓練過程中輸出訊息的詳細程度。0: 不輸
 
 
 def train_model(model, X_train, y_train, epochs = 50):
-  model.fit(X_train, y_train, epochs = epochs, batch_size = 32, verbose = 1)
+  # model.fit(X_train, y_train, epochs = epochs, batch_size = 32, verbose = 1)
+  early_stop = EarlyStopping(
+      monitor = 'val_loss',  # 驗證集的損失值（loss on validation set），它代表模型在沒看過的資料上的預測誤差。
+      patience = 5,  # 如果 val_loss 5 輪沒進步就停止
+      restore_best_weights = True  # 回復到最佳模型參數
+  )
+
+  model.fit(
+      X_train,
+      y_train,
+      epochs = epochs,
+      batch_size = 32,
+      validation_split = 0.2,  # 拿出 20% 做驗證集，幫助模型在訓練期間即時監控是否過擬合
+      callbacks = [early_stop],
+      verbose = 1
+  )
 
 
 # 評估模型

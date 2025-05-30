@@ -1,5 +1,3 @@
-# 版本：ver02
-
 import pandas as pd
 import numpy as np
 
