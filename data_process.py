@@ -36,28 +36,28 @@ def json_to_dataframe(file_path):
 
 # 資料處理：將每星期三支 VD 的資料合併為一個 DataFrame 來進行訓練
 def combine_vd_dataframes(base_dir, vd_folders, date_file):
-    linkid_to_direction = {
-        '6004930400060A': 'South',
-        '6004930000080A': 'North',
-        '6001190200010A': 'East',
-        '6001190600010A': 'West'
-    }
+  linkid_to_direction = {
+      '6004930400060A': 'South',
+      '6004930000080A': 'North',
+      '6001190200010A': 'East',
+      '6001190600010A': 'West',
+  }
 
-    all_dfs = []
-    for vd_folder in vd_folders:
-        file_path = os.path.join(base_dir, vd_folder, date_file)
-        df = json_to_dataframe(file_path)
-        if df is not None:
-            df['VD_ID'] = vd_folder
+  all_dfs = []
+  for vd_folder in vd_folders:
+    file_path = os.path.join(base_dir, vd_folder, date_file)
+    df = json_to_dataframe(file_path)
+    if df is not None:
+      df['VD_ID'] = vd_folder
 
-            # 新增 direction 欄位，依據 LinkID 映射
-            df['Direction'] = df['LinkID'].map(linkid_to_direction)
+      # 新增 direction 欄位，依據 LinkID 映射
+      df['Direction'] = df['LinkID'].map(linkid_to_direction)
 
-            all_dfs.append(df)
+      all_dfs.append(df)  # 指將每個 VD 的 DataFrame 加入到 all_dfs 列表中
 
-    if all_dfs:
-        merged_df = pd.concat(all_dfs, ignore_index=True)
-        merged_df = merged_df.sort_values(by='timestamp').reset_index(drop=True)
-        return merged_df
-    else:
-        return None
+  if all_dfs:
+    merged_df = pd.concat(all_dfs, ignore_index = True)
+    merged_df = merged_df.sort_values(by = 'timestamp').reset_index(drop = True)  # 排序和重設索引
+    return merged_df
+  else:
+    return None

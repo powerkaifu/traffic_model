@@ -24,25 +24,20 @@ from visualizer import plot_scatter_predictions
 如果神經元只是做線性計算（像是加權總和），不管疊幾層，整個網路的輸出還是線性的，等同於只有一層線性模型，學不到複雜的關係。
 所以必須加「非線性函數」（activation function），讓模型可以學到複雜、彎曲的資料模式。
 
-ReLU (Rectified Linear Unit) 是一種常見的非線性激活函數，規則是：
+ReLU (Rectified Linear Unit) 是常見的非線性激活函數，規則是：
 輸入 > 0 時輸出原值
 輸入 ≤ 0 時輸出 0
 這個簡單的函數讓模型可以學習非線性的資料特性。
 '''
 
 
-# input_shape 是模型的輸入形狀，通常是特徵數量，特徵值是 16。
+# input_shape 是模型的輸入形狀，通常是特徵數量，目前 26。
 def build_model(input_shape):
-  # Sequential() 是 Keras 中的一種模型類型，表示一個線性堆疊的神經網路。
-  model = Sequential([
-      # 輸入層，告訴模型輸入的特徵數量
-      Input(shape = ( input_shape,)),
-      # 第一層隱藏層，有 64 個神經元（節點），每個神經元會執行一個簡單的計算，並用 ReLU 激活函數來增加非線性（讓模型能學複雜模式）
-      Dense(64, activation = 'relu'),
-      # 第二層隱藏層，有 32 個神經元，功能同上
-      Dense(32, activation = 'relu'),
-      # 預測一個連續值：綠燈秒數
-      Dense(1)
+  model = Sequential([ # Sequential() 是 Keras 中的一種模型類型，表示一個線性堆疊的神經網路。
+      Input(shape = ( input_shape,)),  # 輸入層，告訴模型輸入的特徵數量
+      Dense(64, activation = 'relu'),  # 第一層隱藏層，有 64 個神經元（節點），每個神經元會執行一個簡單的計算，並用 ReLU 非線性激活函數來讓模型能學習複雜的資料模式
+      Dense(32, activation = 'relu'),  # 第二層隱藏層，有 32 個神經元，功能同上
+      Dense(1)  # 輸出層，產生預測值，只有一個神經元(連續數值->綠燈秒數)
   ])
   # optimizer=Adam 是優化器，用來更新模型權重，讓損失函數（誤差）變小
   # learning_rate=0.001 是更新的速度，太大可能不穩定，太小學得慢
@@ -63,10 +58,11 @@ verbose 這是用來設置訓練過程中輸出訊息的詳細程度。0: 不輸
 
 
 def train_model(model, X_train, y_train, epochs = 50):
-  # model.fit(X_train, y_train, epochs = epochs, batch_size = 32, verbose = 1)
+  # EarlyStopping 是一個回調函數，用來在訓練過程中監控模型的表現，防止過擬合。
   early_stop = EarlyStopping(
       monitor = 'val_loss',  # 驗證集的損失值（loss on validation set），它代表模型在沒看過的資料上的預測誤差。
       patience = 5,  # 如果 val_loss 5 輪沒進步就停止
+      min_delta = 0.001,  # ✅ 設定改善幅度，過小進步也不算
       restore_best_weights = True  # 回復到最佳模型參數
   )
 

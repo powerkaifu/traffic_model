@@ -1,0 +1,42 @@
+[
+	{
+		"VD_ID": "VLRJX00",
+		"DayOfWeek": 1,
+		"Hour": 8,
+		"Minute": 42,
+		"Second": 0,
+		"IsPeakHour": 1,
+		"LaneID": 2,
+		"LaneType": 1,
+		"Speed": 24,
+		"Occupancy": 100,
+		"Volume_M": 5,
+		"Speed_M": 42,
+		"Volume_S": 2,
+		"Speed_S": 24,
+		"Volume_L": 0,
+		"Speed_L": 0,
+		"Volume_T": 0,
+		"Speed_T": 0
+	},
+	{
+		"VD_ID": "VLRJX00",
+		"DayOfWeek": 1,
+		"Hour": 11,
+		"Minute": 52,
+		"Second": 0,
+		"IsPeakHour": 0,
+		"LaneID": 2,
+		"LaneType": 1,
+		"Speed": 29,
+		"Occupancy": 100,
+		"Volume_M": 4,
+		"Speed_M": 39,
+		"Volume_S": 2,
+		"Speed_S": 29,
+		"Volume_L": 0,
+		"Speed_L": 0,
+		"Volume_T": 0,
+		"Speed_T": 0
+	}
+]
