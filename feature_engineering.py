@@ -88,7 +88,7 @@ def prepare_features(df, is_training = True, return_indices = False):
     scaler = StandardScaler()  # 初始化標準化器
     # shap: 標準化後的數值型特徵會對應 SHAP 分析中的特徵值，確保尺度一致
 
-    # 僅對實際存在的數值特徵進行 fit_transform
+    # 對數值特徵進行標準化（Z-score），轉換成有 ± 值的資料分佈（均值 0, 標準差 1）
     df[numerical_features] = scaler.fit_transform(df[numerical_features])
 
     # ⭐️ 關鍵修改：在訓練階段儲存 StandardScaler
@@ -104,6 +104,7 @@ def prepare_features(df, is_training = True, return_indices = False):
       df = assign_green_seconds(df)  # 注意：這裡的 df 應該包含所有需要計算 green_seconds 的特徵
       # 從 df 中排除 'green_seconds' 來獲取最終的特徵名稱
       feature_names = [ col for col in df.columns if col != 'green_seconds']
+      # Pandas.values 提供轉換為 NumPy 陣列(ndarray)
       X = df[feature_names].values  # 特徵矩陣 (確保使用正確的欄位順序)
       y = df['green_seconds'].values.reshape(-1, 1)  # 目標變數 (綠燈秒數)
 
