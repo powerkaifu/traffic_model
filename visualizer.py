@@ -11,95 +11,81 @@ plt.rcParams['axes.unicode_minus'] = False
 
 __all__ = [
     'plot_scatter_predictions',
-    'plot_volume_distribution',
-    'plot_speed_distribution',
-    'plot_occupancy_distribution',
-    'plot_occupancy_vs_green_seconds',
+    'plot_feature_distributions',
+    'plot_hourly_distributions',
     'plot_occupancy_time_trend',
     'plot_residuals',
 ]
 
 
-# 📌 散點圖（plot_scatter_predictions）
-# 功能：直觀呈現「模型預測值」與「Webster 函數產生的實際值」之間的吻合程度。
-# 點落在紅色虛線（y = x）上表示預測與實際完全相符。
-# 點落在線附近表示模型成功模仿了函數行為。
-def plot_scatter_predictions(y_true, y_pred):
-  plt.figure(figsize = ( 8, 8 ))
-  plt.scatter(y_true, y_pred, alpha = 0.5)
-  mn, mx = min(y_true.min(), y_pred.min()), max(y_true.max(), y_pred.max())
-  plt.plot([ mn, mx ], [ mn, mx ], 'r--', label = '理想預測線')
-  plt.xlabel("實際值")
-  plt.ylabel("預測值")
-  plt.title("📊 預測值 vs 實際值")
-  plt.legend()
-  plt.grid(True)
-  plt.axis("equal")
-  plt.tight_layout()
-  plt.show()
+# 📌 散點圖預測結果（plot_scatter_predictions）- 模型評估類
+## 評估訓練、測試集的預測結果
+def plot_scatter_predictions(y_true, y_pred, ax = None, title = "散點圖"):
+  if ax is None:
+    ax = plt.gca()
+  ax.scatter(y_true, y_pred, alpha = 0.5)
+  lims = [np.min([y_true.min(), y_pred.min()]), np.max([y_true.max(), y_pred.max()])]
+  ax.plot(lims, lims, 'r--')  # y=x 參考線
+  ax.set_xlabel("真實值")
+  ax.set_ylabel("預測值")
+  ax.set_title(title)
+  ax.grid(True)
 
 
-# 📌 流量分布圖（plot_volume_distribution）- 特徵分佈類
-# 功能：顯示不同車型的流量分布情況。
-# ✅ 幫助理解各類車型在資料集中所占比例，確認訓練資料的合理性與均衡性。
-# ✅ 為模型判斷交通狀況提供背景依據，也可用來說明資料分布是否對模型造成偏倚。
-def plot_volume_distribution(df):
-  plt.figure(figsize = ( 12, 8 ))
-  sns.histplot(df['Volume_M'], color = 'orange', kde = True, bins = 30, label = '機車')
-  sns.histplot(df['Volume_S'], color = 'blue', kde = True, bins = 30, label = '小型車')
-  sns.histplot(df['Volume_L'], color = 'green', kde = True, bins = 30, label = '大型車')
-  sns.histplot(df['Volume_T'], color = 'red', kde = True, bins = 30, label = '聯結車')
-  plt.title("各類車型流量分布")
-  plt.xlabel("流量")
-  plt.legend()
-  plt.show()
+# 直方圖+KDE 曲線
+def plot_feature_distributions(df, features):
+  n = len(features)
+  fig, axs = plt.subplots(1, n, figsize = (6 * n, 4))
+  if n == 1:
+    axs = [axs]  # 保證是 list 以便迴圈處理
+
+  for ax, feature in zip(axs, features):
+    if feature == "Occupancy":
+      sns.histplot(df['Occupancy'], bins = 30, kde = True, color = 'teal', ax = ax)
+      ax.set_title("佔有率（Occupancy）分布圖", fontsize = 14)
+      ax.set_xlabel("Occupancy (%)", fontsize = 12)
+      ax.set_ylabel("次數", fontsize = 12)
+
+    elif feature == "Speed":
+      sns.histplot(df['Speed_M'], color = 'orange', kde = True, bins = 30, label = '機車', ax = ax)
+      sns.histplot(df['Speed_S'], color = 'blue', kde = True, bins = 30, label = '小型車', ax = ax)
+      sns.histplot(df['Speed_L'], color = 'green', kde = True, bins = 30, label = '大型車', ax = ax)
+      sns.histplot(df['Speed_T'], color = 'red', kde = True, bins = 30, label = '聯結車', ax = ax)
+      ax.set_title("各類車型速度分布")
+      ax.set_xlabel("速度")
+      ax.set_ylabel("次數")
+      ax.legend()
+
+    elif feature == "Volume":
+      sns.histplot(df['Volume_M'], color = 'orange', kde = True, bins = 30, label = '機車', ax = ax)
+      sns.histplot(df['Volume_S'], color = 'blue', kde = True, bins = 30, label = '小型車', ax = ax)
+      sns.histplot(df['Volume_L'], color = 'green', kde = True, bins = 30, label = '大型車', ax = ax)
+      sns.histplot(df['Volume_T'], color = 'red', kde = True, bins = 30, label = '聯結車', ax = ax)
+      ax.set_title("各類車型流量分布")
+      ax.set_xlabel("流量")
+      ax.set_ylabel("次數")
+      ax.legend()
+
+    ax.grid(True)
 
 
-# 📌 速度分布圖（plot_speed_distribution）- 特徵分佈類
-# 功能：顯示各類車型的速度分布情形。
-# ✅ 分析車種速度差異對綠燈配時是否有合理區分。
-# ✅ 作為資料探索與特徵影響力分析的基礎，並輔助後續模型特徵重要性說明。
-def plot_speed_distribution(df):
-  plt.figure(figsize = ( 12, 8 ))
-  sns.histplot(df['Speed_M'], color = 'orange', kde = True, bins = 30, label = '機車')
-  sns.histplot(df['Speed_S'], color = 'blue', kde = True, bins = 30, label = '小型車')
-  sns.histplot(df['Speed_L'], color = 'green', kde = True, bins = 30, label = '大型車')
-  sns.histplot(df['Speed_T'], color = 'red', kde = True, bins = 30, label = '聯結車')
-  plt.title("各類車型速度分布")
-  plt.xlabel("速度")
-  plt.legend()
-  plt.show()
+# 📌 箱型圖-每小時特徵分布圖（plot_hourly_distributions）
+def plot_hourly_distributions(df, features):
 
+  n = len(features)
+  fig, axs = plt.subplots(1, n, figsize = (6 * n, 4))
+  if n == 1:
+    axs = [axs]
 
-# 📌 佔有率分布圖（plot_occupancy_distribution）- 特徵分佈類
-# 功能：顯示佔有率（Occupancy）的分布情況。
-# ✅ 幫助理解交通流量的佔用情況，確認資料集是否有合理的佔有率分布。
-def plot_occupancy_distribution(df):
-  plt.figure(figsize = ( 10, 6 ))
-  sns.histplot(df['Occupancy'], bins = 30, kde = True, color = 'teal')
-  plt.title("佔有率（Occupancy）分布圖")
-  plt.xlabel("Occupancy (%)")
-  plt.ylabel("頻率")
-  plt.grid(True)
-  plt.show()
-
-
-# 📌 佔有率與綠燈秒數散點圖（plot_occupancy_vs_green_seconds
-# 功能：顯示佔有率與綠燈秒數之間的關係。
-# ✅ 幫助理解佔有率對綠燈配時的影響，確認模型是否合理考慮了佔有率因素。
-def plot_occupancy_vs_green_seconds(df):
-  plt.figure(figsize = ( 10, 6 ))
-  plt.scatter(df['Occupancy'], df['green_seconds'], alpha = 0.5, color = 'purple')
-  plt.title("佔有率 vs 綠燈秒數散點圖")
-  plt.xlabel("Occupancy (%)")
-  plt.ylabel("綠燈秒數 (seconds)")
-  plt.grid(True)
-  plt.show()
+  for ax, feature in zip(axs, features):
+    sns.boxplot(data = df, x = "hour", y = feature, ax = ax)
+    ax.set_title(f"{feature} 每小時分布")
+    ax.set_xlabel("小時 (0-23)")
+    ax.set_ylabel(feature)
+    ax.grid(True)
 
 
 # 📌 佔有率隨時間變化趨勢圖（plot_occupancy_time_trend）
-# 功能：顯示佔有率隨時間變化的趨勢。
-# ✅ 幫助分析佔有率在不同時間段的變化情況，確認是否存在高峰時段。
 def plot_occupancy_time_trend(df):
   # 假設你有日期時間欄位或用 Hour 組合時間
   df['Time'] = df['Hour'] + df['Minute'] / 60
@@ -127,13 +113,3 @@ def plot_residuals(y_true, y_pred):
   plt.grid(True)
   plt.tight_layout()
   plt.show()
-
-
-# 📌 散點圖（plot_scatter_predictions）
-# 功能：直觀呈現「模型預測值」與「Webster 函數產生的實際值」之間的吻合程度。
-# 分析重點：
-# - 點落在紅色虛線（y = x）上表示預測與實際完全相符。
-# - 點落在線附近表示模型成功模仿了函數行為，但不是直接套用。
-# 使用意義：
-# ✅ 可用於向指導老師說明：模型是透過學習預測趨勢，而非硬套公式。
-# ✅ 本圖為教師模仿（imitation learning）的有效視覺化證明。
