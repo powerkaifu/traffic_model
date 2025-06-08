@@ -85,7 +85,7 @@ def main():
   if os.path.exists(model_path):
     model = load_model(model_path)
     print("✅ 已加載先前訓練的模型")
-    model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate = 0.001), loss = 'mse')
+    model.compile(optimizer = tf.keras.optimizers.Adam(learning_rate = 0.001), loss = 'mse', metrics = ['mae'])
   else:
     print("⚠️ 模型檔案不存在，建立新的模型")
     print(f"⚠️ 建立新模型，輸入特徵數量：{X.shape[1]}")  # 26 個特徵
@@ -103,7 +103,11 @@ def main():
 
   # 訓練模型 ---------------------------------------------------------------------------------------------------------
   print("⏳ 開始模型訓練...")
-  train_model(model, X_train, y_train, epochs = 50)
+  history = train_model(model, X_train, y_train, epochs = 50)
+  train_mae = history.history['mae']  # 每個 epoch 的訓練 MAE
+  val_mae = history.history['val_mae']  # 每個 epoch 的驗證 MAE
+  plot_mae(train_mae, val_mae)
+
   print("✅ 模型訓練完成。")
 
   # 儲存模型 ---------------------------------------------------------------------------------------------------------

@@ -20,12 +20,11 @@ def build_model(input_shape):
       Dense(64, activation = 'relu'),  # 第一層隱藏層，有 64 個神經元（節點），每個神經元會執行一個簡單的計算，並用 ReLU 非線性激活函數來讓模型能學習複雜的資料模式
       Dense(32, activation = 'relu'),  # 第二層隱藏層，有 32 個神經元，功能同上
       Dense(1),  # 輸出層，產生預測值，只有一個神經元(連續數值->綠燈秒數)
-      # Rescaling(scale=79.0, offset=20.0)  # Rescaling 層，用來將輸出值縮放到 20 到 99 秒之間
   ])
   # optimizer=Adam 是優化器，用來更新模型權重，讓損失函數（誤差）變小
   # learning_rate=0.001 是更新的速度，太大可能不穩定，太小學得慢
   # loss='mse' 是損失函數，用「均方誤差」衡量預測值和真實值差距
-  model.compile(optimizer = Adam(learning_rate = 0.001), loss = 'mse')
+  model.compile(optimizer = Adam(learning_rate = 0.001), loss = 'mse', metrics = ['mae'])
   return model
 
 
@@ -34,13 +33,13 @@ def train_model(model, X_train, y_train, epochs = 50):
   # EarlyStopping 回調函數，用來在訓練過程中監控模型的表現，防止過擬合。
   early_stop = EarlyStopping(
       monitor = 'val_loss',  # 驗證集的損失值，代表模型在沒看過的資料上的預測誤差。
-      patience = 5,  # 連續 5 次訓練輪次都沒明顯進步，就提前停止訓練。
+      patience = 10,  # 連續 10 次訓練輪次都沒明顯進步，就提前停止訓練。
       min_delta = 0.001,  # ✅ 設定改善幅度，過小進步也不算
       restore_best_weights = True  # 回復到最佳模型參數
   )
 
   # 開始訓練模型
-  model.fit(
+  history = model.fit(
       X_train,  # 訓練資料_特徵
       y_train,  # 訓練資料_目標（秒數）
       epochs = epochs,  # 訓練輪數
@@ -49,6 +48,8 @@ def train_model(model, X_train, y_train, epochs = 50):
       callbacks = [early_stop],  # 啟用早停機制監控訓練過程。
       verbose = 1  # 印出訓練過程資訊（每輪損失、驗證損失等）
   )
+
+  return history
 
 
 # 評估模型

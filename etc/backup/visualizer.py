@@ -10,12 +10,25 @@ plt.rcParams['font.sans-serif'] = ['Microsoft JhengHei']
 plt.rcParams['axes.unicode_minus'] = False
 
 __all__ = [
+    'plot_mae',
     'plot_scatter_predictions',
     'plot_feature_distributions',
     'plot_hourly_distributions',
     'plot_occupancy_time_trend',
     'plot_residuals',
 ]
+
+# 📌 MLP 模型訓練過程 MAE 變化圖（plot_mae）
+
+
+def plot_mae(train_mae, val_mae):
+  plt.plot(train_mae, label = 'Training MAE')
+  plt.plot(val_mae, label = 'Validation MAE')
+  plt.xlabel('Epoch')
+  plt.ylabel('MAE (秒)')
+  plt.title('MLP 模型訓練過程 MAE 變化')
+  plt.legend()
+  plt.show()
 
 
 # 📌 散點圖預測結果（plot_scatter_predictions）- 模型評估類
