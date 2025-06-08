@@ -2,12 +2,30 @@ import pandas as pd
 import os
 import json
 import joblib
+import numpy as np  # 新增導入 numpy
 from tensorflow.keras.models import load_model  # type: ignore
 
 # 自己的模組
-from predictor import predict_new
+# from predictor import predict_new # 假設你的 predict_new 會返回原始預測值
 
 
+# 定義一個帶有裁剪邏輯的預測函數
+def predict_with_clipping(model, X_new_data, min_val = 30.0, max_val = 99.0):
+  """
+    使用模型進行預測，並將結果裁剪到指定範圍內。
+    """
+  predicted_green_seconds_raw = model.predict(X_new_data)
+
+  # 對每個預測值進行裁剪
+  clipped_green_seconds = np.clip(predicted_green_seconds_raw, min_val, max_val)
+
+  # 四捨五入並轉換為整數
+  final_green_seconds = np.round(clipped_green_seconds).astype(int)
+
+  return final_green_seconds
+
+
+# 你的 preprocess_and_scale_new_data 函數 (保持不變)
 def preprocess_and_scale_new_data(new_data_df: pd.DataFrame, feature_names: list, scaler):
   one_hot_vd_cols = [ col for col in feature_names if col.startswith('VD_ID_') ]
   new_data_df_processed = pd.get_dummies(new_data_df, columns = ['VD_ID'], prefix = 'VD_ID')
@@ -103,11 +121,14 @@ else:
   for i, sample_input in enumerate(samples_inputs):
     df = pd.DataFrame([sample_input])
     X_new = preprocess_and_scale_new_data(df, feature_names, scaler)
-    pred = predict_new(model, X_new)
+
+    # 這裡調用新的預測函數，它會處理裁剪
+    pred_clipped = predict_with_clipping(model, X_new, min_val = 20.0, max_val = 99.0)
 
     hour = sample_input.get('Hour', -1)
     minute = sample_input.get('Minute', -1)
     is_peak = sample_input.get('IsPeakHour', 0)
     peak_status = "尖峰" if is_peak == 1 else "離峰"
 
-    print(f"範例 {i+1}：時間 {hour:02d}:{minute:02d}（{peak_status}） → 預測綠燈秒數 = {pred[0][0]:.2f} 秒")
+    # pred_clipped 的形狀是 (1, 1)，所以取值是 pred_clipped[0][0]
+    print(f"範例 {i+1}：時間 {hour:02d}:{minute:02d}（{peak_status}） → 預測綠燈秒數 = {pred_clipped[0][0]:.0f} 秒")  # 改為 .0f 顯示整數

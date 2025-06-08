@@ -71,7 +71,8 @@ def assign_green_seconds(df, n_phases = 2, saturation_flow = 1900, loss_time_per
     green_seconds = green_seconds.clip(upper = 60)
 
   # 最終裁剪上下界
-  green_seconds = green_seconds.clip(lower = 20, upper = 99).round().astype(int)
+  green_seconds = green_seconds.clip(lower = 20, upper = 90).round().astype(int)
+
   df['green_seconds'] = green_seconds
 
   # 清除暫存欄位

@@ -6,6 +6,8 @@ from tensorflow.keras.models import Sequential  # type: ignore
 from tensorflow.keras.layers import Dense, Input  # type: ignore
 from tensorflow.keras.optimizers import Adam  # type: ignore
 from tensorflow.keras.callbacks import EarlyStopping  # type: ignore
+from tensorflow.keras.layers import Lambda  # type: ignore
+from keras.layers import Rescaling  # type: ignore
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from visualizer import plot_scatter_predictions
 
@@ -17,7 +19,8 @@ def build_model(input_shape):
       Input(shape = ( input_shape,)),  # 輸入層，告訴模型輸入的特徵數量
       Dense(64, activation = 'relu'),  # 第一層隱藏層，有 64 個神經元（節點），每個神經元會執行一個簡單的計算，並用 ReLU 非線性激活函數來讓模型能學習複雜的資料模式
       Dense(32, activation = 'relu'),  # 第二層隱藏層，有 32 個神經元，功能同上
-      Dense(1)  # 輸出層，產生預測值，只有一個神經元(連續數值->綠燈秒數)
+      Dense(1),  # 輸出層，產生預測值，只有一個神經元(連續數值->綠燈秒數)
+      # Rescaling(scale=79.0, offset=20.0)  # Rescaling 層，用來將輸出值縮放到 20 到 99 秒之間
   ])
   # optimizer=Adam 是優化器，用來更新模型權重，讓損失函數（誤差）變小
   # learning_rate=0.001 是更新的速度，太大可能不穩定，太小學得慢
@@ -49,7 +52,24 @@ def train_model(model, X_train, y_train, epochs = 50):
 
 
 # 評估模型
-def evaluate_model(model, X_test, y_test):
+def evaluate_train(model, X_train, y_train):
+  y_pred = model.predict(X_train)
+
+  mse = mean_squared_error(y_train, y_pred)
+  rmse = np.sqrt(mse)
+  mae = mean_absolute_error(y_train, y_pred)
+  r2 = r2_score(y_train, y_pred)
+
+  print("訓練集模型評估結果：")
+  print(f"📉 MSE（均方誤差）: {mse:.2f}")
+  print(f"📉 RMSE（均方根誤差）: {rmse:.2f}")
+  print(f"📉 MAE（平均絕對誤差）: {mae:.2f}")
+  print(f"📈 R²（決定係數）: {r2:.4f}")
+
+  return y_pred
+
+
+def evaluate_test(model, X_test, y_test):
   y_pred = model.predict(X_test)
 
   mse = mean_squared_error(y_test, y_pred)  # 均方誤差
@@ -57,7 +77,24 @@ def evaluate_model(model, X_test, y_test):
   mae = mean_absolute_error(y_test, y_pred)  # 平均絕對誤差
   r2 = r2_score(y_test, y_pred)  # 決定係數
 
-  print("模型評估結果：")
+  print("測試集模型評估結果：")
+  print(f"📉 MSE（均方誤差）: {mse:.2f}")
+  print(f"📉 RMSE（均方根誤差）: {rmse:.2f}")
+  print(f"📉 MAE（平均絕對誤差）: {mae:.2f}")
+  print(f"📈 R²（決定係數）: {r2:.4f}")
+
+  return y_pred
+
+
+def evaluate_train(model, X_train, y_train):
+  y_pred = model.predict(X_train)
+
+  mse = mean_squared_error(y_train, y_pred)
+  rmse = np.sqrt(mse)
+  mae = mean_absolute_error(y_train, y_pred)
+  r2 = r2_score(y_train, y_pred)
+
+  print("訓練集模型評估結果：")
   print(f"📉 MSE（均方誤差）: {mse:.2f}")
   print(f"📉 RMSE（均方根誤差）: {rmse:.2f}")
   print(f"📉 MAE（平均絕對誤差）: {mae:.2f}")
@@ -71,8 +108,9 @@ def evaluate_model(model, X_test, y_test):
 #   predictions = model.predict(X_new)
 #   return np.round(predictions)  # 綠燈秒數通常是整數
 
-def predict_new(model, X_new, min_sec=20, max_sec=99):
-    predictions = model.predict(X_new)
-    rounded = np.round(predictions).astype(int)  # 四捨五入成整數
-    clipped = np.clip(rounded, min_sec, max_sec)  # 限制範圍在20~99
-    return clipped
+
+def predict_new(model, X_new, min_sec = 20, max_sec = 99):
+  predictions = model.predict(X_new)
+  rounded = np.round(predictions).astype(int)  # 四捨五入成整數
+  clipped = np.clip(rounded, min_sec, max_sec)  # 限制範圍在20~99
+  return clipped
