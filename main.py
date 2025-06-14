@@ -31,14 +31,35 @@ def main():
   # date_file = '2025-03-17_2025-03-23.json'
   # date_file = '2025-03-24_2025-03-30.json'
   # date_file = '2025-03-31_2025-04-06.json'
-  date_file = '2025-05-05_2025-05-11.json'
-  # date_file = '2025-06-02_2025-06-08.json'
+  # date_file = '2025-05-05_2025-05-11.json'
+  date_file = '2025-06-02_2025-06-08.json'
 
-  # 合併多個偵測器資料為一個 DataFrame
+  # --- 讀取本週資料 ---
   merged_df = combine_vd_dataframes(base_dir, vd_folders, date_file)
   if merged_df is None:
     print("❌ 沒有讀取到任何 VD 的資料。")
     return
+
+  # --- 讀取上一週資料 ---
+  # 為了避免神經網路在增量訓練時發生「災難性遺忘（Catastrophic Forgetting）」，
+  # 也就是模型在學習新資料時忘記了之前已學過的知識，
+  # 我們會保留部分舊資料（上一週的資料）一起混合訓練。
+  # 這樣可以讓模型在面對新數據時，同時保持對過去資料的記憶，提升泛化能力與穩定性。
+  # 因為直接把所有舊資料都加進去訓練會導致資料量過大，訓練成本上升，
+  # 所以採用抽樣方式，取部分舊資料，減少資料量同時保持舊知識。
+  # 這種做法在增量學習與持續學習中非常常見，可以有效緩解模型忘記舊資料的問題。
+  date_file_last_week = '2025-05-05_2025-05-11.json'  # 請根據實際上一週檔名調整
+  merged_df_last_week = combine_vd_dataframes(base_dir, vd_folders, date_file_last_week)
+
+  if merged_df_last_week is not None:
+    # 抽樣舊資料 20%（可依需求調整比例）
+    sample_ratio = 0.2
+    sampled_old_df = merged_df_last_week.sample(frac = sample_ratio, random_state = 42)
+    # 合併本週與抽樣後的舊資料
+    merged_df = pd.concat([ merged_df, sampled_old_df ], ignore_index = True)
+    print(f"合併本週與上一週抽樣資料，總筆數：{len(merged_df)}")
+  else:
+    print("⚠️ 沒有讀取到上一週資料，僅使用本週資料訓練。")
 
   print(f"合併後的 DataFrame 資料筆數：{len(merged_df)}")
   print(f"合併後的 DataFrame 欄位：{merged_df.columns}")
@@ -105,8 +126,11 @@ def main():
   print("⏳ 開始模型訓練...")
   history = train_model(model, X_train, y_train, epochs = 50)
   train_mae = history.history['mae']  # 每個 epoch 的訓練 MAE
-  val_mae = history.history['val_mae']  # 每個 epoch 的驗證 MAE
-  plot_mae(train_mae, val_mae)
+  val_mae = history.history.get('val_mae')  # 有些版本沒驗證集則無此鍵
+  if val_mae is not None:
+    plot_mae(train_mae, val_mae)
+  else:
+    plot_mae(train_mae, [])
 
   print("✅ 模型訓練完成。")
 
@@ -149,6 +173,7 @@ def main():
   plt.tight_layout()
   plt.show()
 
+  # 評斷模型泛化好壞
   print("訓練集預測最小綠燈秒數：", np.min(y_pred_train))
   print("訓練集預測最大綠燈秒數：", np.max(y_pred_train))
   print("測試集預測最小綠燈秒數：", np.min(y_pred_test))

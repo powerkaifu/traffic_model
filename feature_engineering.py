@@ -85,7 +85,7 @@ def prepare_features(df, is_training = True, return_indices = False):
     # 但不會影響欄位名稱。
     all_current_features = df.columns.tolist()
 
-    scaler = StandardScaler()  # 初始化標準化器
+    scaler = StandardScaler()  # 標準化（Standardization)，初始化標準化器
     # shap: 標準化後的數值型特徵會對應 SHAP 分析中的特徵值，確保尺度一致
 
     # 對數值特徵進行標準化（Z-score），轉換成有 ± 值的資料分佈（均值 0, 標準差 1）
