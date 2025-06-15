@@ -48,6 +48,7 @@ def main():
   # 因為直接把所有舊資料都加進去訓練會導致資料量過大，訓練成本上升，
   # 所以採用抽樣方式，取部分舊資料，減少資料量同時保持舊知識。
   # 這種做法在增量學習與持續學習中非常常見，可以有效緩解模型忘記舊資料的問題。
+
   date_file_last_week = '2025-05-05_2025-05-11.json'  # 請根據實際上一週檔名調整
   merged_df_last_week = combine_vd_dataframes(base_dir, vd_folders, date_file_last_week)
 
@@ -170,6 +171,7 @@ def main():
   fig, axs = plt.subplots(1, 2, figsize = ( 12, 5 ))  # 一排兩張圖
   plot_scatter_predictions(y_train.flatten(), y_pred_train.flatten(), ax = axs[0], title = "訓練集散點圖")
   plot_scatter_predictions(y_test.flatten(), y_pred_test.flatten(), ax = axs[1], title = "測試集散點圖")
+
   plt.tight_layout()
   plt.show()
 
@@ -183,7 +185,7 @@ def main():
   # plot_residuals(y_test, y_pred_test)
 
   # SHAP
-  # explain_shap_feature(model, X_train, X_test, feature_names, output_dir = "shap")
+  explain_shap_feature(model, X_train, X_test, feature_names, output_dir = "shap")
 
 
 # 執行主程式
